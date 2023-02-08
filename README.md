@@ -18,7 +18,7 @@ Step 2:
     wget github link - FIX ME
 
 ## Usage
-The script takes two arguments: Duration to monitor and whether to run a stress test. Duration to run (in seconds) is passed as an integer and the option to run a stress test in parallel is passed as either 0 or 1.
+The script takes two arguments: Duration to monitor and whether to run a stress test. Duration (in seconds) is passed as an integer and the option to run a stress test in parallel is passed as either 0 or 1.
 
 For example, the following command runs a CPU stress test for 5 minutes (300 seconds)
 

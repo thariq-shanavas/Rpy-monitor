@@ -8,8 +8,8 @@ A python script to render a real-time graph of temperture and CPU frequency vs t
 
 ## Installation
 
-[SSH into a Raspberry Pi.](https://itsfoss.com/ssh-into-raspberry/)
-
+Step 1: [SSH into the Raspberry Pi.](https://itsfoss.com/ssh-into-raspberry/)
+Step 2:
     python3 -m pip install plotext
     mkdir ~/Rpy-monitor
     cd Rpy-monitor

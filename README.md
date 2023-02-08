@@ -8,6 +8,8 @@ A python script to render a real-time graph of temperture and CPU frequency vs t
 
 ## Installation
 
+[SSH into a Raspberry Pi.](https://itsfoss.com/ssh-into-raspberry/)
+
     python3 -m pip install plotext
     mkdir ~/Rpy-monitor
     cd Rpy-monitor
@@ -25,6 +27,15 @@ To simply run the monitor for 60 seconds without stressing the CPU
     python3 Rpy-monitor.py 60 0
   
 Tested on Raspberry Pi 4b running Raspbian Lite.
+
+## Example graphs
+1. Stress testing Raspberry Pi 4 with heatsink case, overclocked to 2 GHz
+
+    ![Stress test](/examples/stress_test.png)
+    
+2. What happens if you stick an ice-pack on a Pi?
+
+    ![Ice pack test](/examples/rpy-monitor-ice.png)
 
 ## Dependencies
 * Python 3 (duh)

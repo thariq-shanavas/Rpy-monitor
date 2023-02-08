@@ -33,7 +33,7 @@ Tested on Raspberry Pi 4b running Raspbian Lite.
 ## Example graphs
 1. Stress testing Raspberry Pi 4 with heatsink case, overclocked to 2 GHz
 
-    ![Stress test](/examples/stress_test.png)
+    ![Stress test](/examples/stress-test.png)
     
 2. What happens if you stick an ice-pack on a Pi?
 

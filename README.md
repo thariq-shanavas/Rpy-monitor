@@ -15,7 +15,7 @@ Step 2:
     python3 -m pip install plotext
     mkdir ~/Rpy-monitor
     cd Rpy-monitor
-    wget github link - FIX ME
+    wget raw.githubusercontent.com/thariq-shanavas/Rpy-monitor/main/Rpy-monitor.py
 
 ## Usage
 The script takes two arguments: Duration to monitor and whether to run a stress test. Duration (in seconds) is passed as an integer and the option to run a stress test in parallel is passed as either 0 or 1.

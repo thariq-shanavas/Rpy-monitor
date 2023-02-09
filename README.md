@@ -19,7 +19,7 @@ Step 2:
     wget raw.githubusercontent.com/thariq-shanavas/Rpy-monitor/main/Rpy-monitor.py
 
 ## Usage
-The script takes two arguments: Duration to monitor and whether to run a stress test. Duration (in seconds) is passed as an integer and the option to run a stress test in parallel is passed as either 0 or 1.
+The script takes two arguments: Duration to monitor and whether to run a stress test. Duration (in seconds) is passed as an integer and the option to run a stress test in parallel is passed as either 0 or 1. If no arguments are supplied, the script runs for 5 minutes and skips the stress test. If only one argument is provided, it is interpreted as the duration to monitor and the stress test is skipped.
 
 For example, the following command runs a CPU stress test for 5 minutes (300 seconds). The graph is refreshed every 5 seconds by default.
 

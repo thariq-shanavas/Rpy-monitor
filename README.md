@@ -2,13 +2,13 @@
 A lightweight hardware monitor for linux, with a headless Raspberry pi in mind.
 
 ## Features
-A python script to render a real-time graph of temperture and CPU frequency vs time for a Raspberry Pi. 
+A python script to render a real-time graph of temperture and CPU frequency vs time. 
 * Lightweight and minimal dependencies.
 * Does not need x11 forwarding as the graph is rendered directly to the terminal.
 
 ## Installation
 
-Step 1: [SSH into the Raspberry Pi.](https://itsfoss.com/ssh-into-raspberry/)
+Step 1: [SSH into the Raspberry Pi](https://itsfoss.com/ssh-into-raspberry/) (or any headless linux server)
 
 Step 2:
 
@@ -21,7 +21,7 @@ Step 2:
 ## Usage
 The script takes two arguments: Duration to monitor and whether to run a stress test. Duration (in seconds) is passed as an integer and the option to run a stress test in parallel is passed as either 0 or 1.
 
-For example, the following command runs a CPU stress test for 5 minutes (300 seconds)
+For example, the following command runs a CPU stress test for 5 minutes (300 seconds). The graph is refreshed every 5 seconds by default.
 
     cd ~/Rpy-monitor
     python3 Rpy-monitor.py 300 1

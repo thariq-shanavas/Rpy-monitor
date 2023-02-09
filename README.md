@@ -44,4 +44,4 @@ Tested on Raspberry Pi 4b running Raspbian Lite and my laptop running Arch Linux
 * Python 3 (duh)
 * Python [plotext module](https://github.com/piccolomo/plotext)
 * Python [Subprocess module](https://docs.python.org/3/library/subprocess.html), likely came with your Python installation.
-* [Stress tool] (https://linux.die.net/man/1/stress)
+* Stress tool (https://linux.die.net/man/1/stress)

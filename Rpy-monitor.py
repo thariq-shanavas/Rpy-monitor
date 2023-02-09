@@ -3,13 +3,26 @@ import subprocess
 import time
 import sys
 
-duration = int(sys.argv[1]) # seconds
+
 graphing_interval = 5 # seconds
 temp_vs_time = []
 freq_vs_time = []
 
+if len(sys.argv) == 3:
+        perform_stress_test = bool(int(sys.argv[2]))
+        duration = int(sys.argv[1]) # seconds
+        
+if len(sys.argv) == 2:
+        perform_stress_test = False
+        duration = int(sys.argv[1]) # seconds
 
-if bool(int(sys.argv[2])):
+if len(sys.argv) == 1:
+        perform_stress_test = False
+        duration = 300 # seconds
+
+
+
+if perform_stress_test:
         print("Beginning stress test in 5 seconds...")
         time.sleep(5)
         num_threads = str(subprocess.check_output("cat /proc/cpuinfo | grep processor | wc -l",shell=True))[2]     # Slightly convoluted to avoid more dependencies

@@ -1,5 +1,5 @@
 # Rpy-monitor
-A lightweight hardware monitor for headless Raspberry pi. 
+A lightweight hardware monitor for linux, with a headless Raspberry pi in mind.
 
 ## Features
 A python script to render a real-time graph of temperture and CPU frequency vs time for a Raspberry Pi. 
@@ -13,6 +13,7 @@ Step 1: [SSH into the Raspberry Pi.](https://itsfoss.com/ssh-into-raspberry/)
 Step 2:
 
     python3 -m pip install plotext
+    sudo apt install stress
     mkdir ~/Rpy-monitor
     cd Rpy-monitor
     wget raw.githubusercontent.com/thariq-shanavas/Rpy-monitor/main/Rpy-monitor.py
@@ -28,7 +29,7 @@ To simply run the monitor for 60 seconds without stressing the CPU
 
     python3 Rpy-monitor.py 60 0
   
-Tested on Raspberry Pi 4b running Raspbian Lite.
+Tested on Raspberry Pi 4b running Raspbian Lite and my laptop running Arch Linux. 
 
 ## Example graphs
 1. Stress testing Raspberry Pi 4 with heatsink case, overclocked to 2 GHz
@@ -43,3 +44,4 @@ Tested on Raspberry Pi 4b running Raspbian Lite.
 * Python 3 (duh)
 * Python [plotext module](https://github.com/piccolomo/plotext)
 * Python [Subprocess module](https://docs.python.org/3/library/subprocess.html), likely came with your Python installation.
+* [Stress tool] (https://linux.die.net/man/1/stress)

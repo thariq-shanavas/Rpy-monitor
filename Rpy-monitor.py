@@ -8,10 +8,12 @@ graphing_interval = 5 # seconds
 temp_vs_time = []
 freq_vs_time = []
 
+
 if bool(int(sys.argv[2])):
         print("Beginning stress test in 5 seconds...")
         time.sleep(5)
-        stress_process=subprocess.Popen("stress -c 16 -t " + str(duration)+ " > /dev/null",shell=True)
+        num_threads = str(subprocess.check_output("cat /proc/cpuinfo | grep processor | wc -l",shell=True))[2]     # Slightly convoluted to avoid more dependencies
+        stress_process=subprocess.Popen("stress -c "+num_threads+" -t " + str(duration)+ " > /dev/null",shell=True)
 freq_file = open("/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq","r")
 temperature_file = open("/sys/class/thermal/thermal_zone0/temp","r")
 

@@ -11,9 +11,13 @@ freq_vs_time = []
 if bool(int(sys.argv[2])):
         print("Beginning stress test in 5 seconds...")
         time.sleep(5)
-        stress_process=subprocess.Popen("stress -c 4 -t " + str(duration)+ " > /dev/null",shell=True)
+        stress_process=subprocess.Popen("stress -c 16 -t " + str(duration)+ " > /dev/null",shell=True)
 freq_file = open("/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq","r")
 temperature_file = open("/sys/class/thermal/thermal_zone0/temp","r")
+
+max_CPU_freq_file = open("/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq","r")
+max_cpu_freq = float(max_CPU_freq_file.readline().rstrip())/1000 # MHz
+max_CPU_freq_file.close()
 
 for i in range(duration):       # Poll every second
         freq_file.seek(0)
@@ -28,7 +32,7 @@ for i in range(duration):       # Poll every second
                 plt.scatter(temp_vs_time, xside = "lower", yside = "left", label = "Temperature")
                 plt.scatter(freq_vs_time, xside = "lower", yside = "right", label = "CPU Frequency")
                 plt.ylim(20,100,yside = "left")
-                plt.ylim(0,2500,yside = "right")
+                plt.ylim(0,max_cpu_freq+500,yside = "right")
                 plt.xlim(0,duration)
                 plt.xlabel("Time (s)")
                 plt.ylabel("Temperature (°C)", yside = "left")

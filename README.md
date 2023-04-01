@@ -5,6 +5,7 @@ A lightweight hardware monitor for linux, with a headless Raspberry pi in mind.
 A python script to render a real-time graph of temperture and CPU frequency vs time. 
 * Lightweight and minimal dependencies.
 * Does not need x11 forwarding as the graph is rendered directly to the terminal.
+* Nothing to install on client side!
 
 ## Installation
 

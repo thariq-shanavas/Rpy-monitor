@@ -1,9 +1,9 @@
 # Rpy-monitor
-A lightweight hardware monitor for linux, with a headless Raspberry pi in mind.
+A lightweight temperature monitor and stress testing tool for linux, with a headless Raspberry pi in mind.
 
 ## Features
 A python script to render a real-time graph of temperture and CPU frequency vs time. 
-* Lightweight and minimal dependencies.
+* Extremely lightweight and minimal dependencies.
 * Does not need x11 forwarding as the graph is rendered directly to the terminal.
 * Nothing to install on client side!
 
